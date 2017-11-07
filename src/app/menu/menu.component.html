@@ -1,0 +1,18 @@
+<div id='menu-outer'>
+  <div class='table'>
+    <ul id='horizontal-list'>
+      <div [hidden]="ifPassed()">
+        <li> <a routerLink=''>Home</a></li>
+        <li> <a routerLink='/about'>About</a></li>
+        <li> <a routerLink='/contact'>Contact</a></li>
+      </div>
+      <div [hidden]="!ifPassed()">
+        <li> <a routerLink='/profile'>Home</a></li>
+        <li> <a routerLink='/about'>About</a></li>
+        <li> <a routerLink='/contact'>Contact</a></li>
+      </div>
+    </ul>
+    
+  </div>
+  <div id='copyright'><small>&copy; Copyright 2017, KNOTRA</small></div>
+</div>

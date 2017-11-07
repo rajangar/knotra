@@ -1,0 +1,55 @@
+#loginform {
+    margin: 0px 0 5px 10px;
+    text-align: right;
+}
+
+#userid, #password {
+    line-height: 16px;
+    font-weight: 400;
+    color: rgba(0,0,0,0.85);
+    font-size: 13px;
+    display: inline-block;
+    width: 216px;
+    height: 32px;
+    margin: 10px 8px 10px 0;
+    padding: 0 10px;
+    /* background: #f3f6f8; */
+    background: #d6d9dd;
+    /* border: 1px solid #b3b6b9; */
+    /* border: 1px solid #d6d9dd; */
+    /* border-radius: 2px; */
+}
+
+#login-submit {
+    line-height: 24px;
+    /* color: #fff; */
+    color: #d6d9dd;
+    font-size: 17px;
+    font-weight: 400;
+    display: inline-block;
+    width: auto;
+    height: 32px;
+    margin: 10px 0 0;
+    padding: 0 20px;
+    background-color: transparent;
+    /* border: 1px solid #fff; */
+    /* border: 1px solid d6d9dd ; */
+    /* border-radius: 2px; */
+}
+
+#loginform .link-forgot-password {
+    text-decoration: none;
+    background-color: transparent;
+    /* border: 0; */
+    /* vertical-align: baseline; */
+    line-height: 16px;
+    font-weight: 400;
+    font-size: 13px;
+    /*display: flex;*/
+    height: 100%;
+    /* -webkit-box-align: center; */
+    /* align-items: center; */
+    color: #d6d9dd;
+    margin: 0 10px 0 20px;
+    /* box-sizing: border-box; */
+}

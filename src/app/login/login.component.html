@@ -1,0 +1,64 @@
+
+<!-- <form id="loginform" action="/login" method="post"> -->
+<!-- <form id="loginform" (ngSubmit)="onSubmit()" #loginForm="ngForm"> -->
+  <!-- <input type="text" name="session_key" class="login-email" autocapitalize="off" tabindex="1" id="userid" placeholder="Email" autofocus="autofocus"> -->
+  <!-- <input type="text" id='userid' required name='userid' autocapitalize="off" tabindex="1" placeholder="Email"> -->
+  <!-- <input type="password" id='password' name='password' aria-required="true" tabindex="1" placeholder="Password"> -->
+  <!-- <input type="password" name="session_password" class="login-password" id="password" aria-required="true" tabindex="1" placeholder="Password"> -->
+  <!--<button type="submit" id="button">Login</button>-->
+  <!-- <input tabindex="1" id="login-submit" type="submit" value="Sign in"> -->
+  <!-- <input tabindex="1" id="login-submit" class="login submit-button" type="submit" value="Sign in" disabled=""> -->
+  <!-- <a class="link-forgot-password" tabindex="1" routerLink="/forgot-password">Forgot password?</a> -->
+<!-- </form> -->
+
+<!-- <div class="container"> -->
+  {{checkCookie()}}
+    <div [hidden]="loginPassed()">
+      <!-- <h1>Hero Form</h1> -->
+      <form id="loginform" (ngSubmit)="onSubmit()" #loginForm="ngForm">
+        <!-- <div class="form-group"> -->
+          <label for="userid">UserId</label>
+          <input type="text" class="form-control" id="userid"
+                 required
+                 [(ngModel)]="loginService.userid" name="userid"
+                 #userid="ngModel" tabindex="1" placeholder="UserId">
+          <!-- <div [hidden]="userid.valid || userid.pristine"
+               class="alert alert-danger">
+            Id is required
+          </div> -->
+        <!-- </div> -->
+  
+        <!-- <div class="form-group"> -->
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" required
+                 [(ngModel)]="loginService.password" name="password" tabindex="1" placeholder="Password">
+        <!-- </div> -->
+  
+        <button tabindex="1" id="login-submit" type="submit" class="btn btn-success" [disabled]="!loginForm.form.valid">Sign in</button>
+        
+        <a class="link-forgot-password" tabindex="1" routerLink="/forgot-password">Forgot password?</a>
+      </form>
+    </div>
+
+    <div [hidden]="!loginPassed()">
+      <h1>Profile</h1>
+    </div>
+  
+    <!-- <div [hidden]="!submitted">
+      <h2>You submitted the following:</h2>
+      <div class="row">
+        <div class="col-xs-3">Name</div>
+        <div class="col-xs-9  pull-left">{{ model.name }}</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">Alter Ego</div>
+        <div class="col-xs-9 pull-left">{{ model.alterEgo }}</div>
+      </div>
+      <div class="row">
+        <div class="col-xs-3">Power</div>
+        <div class="col-xs-9 pull-left">{{ model.power }}</div>
+      </div>
+      <br>
+      <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+    </div> -->
+  <!-- </div> -->

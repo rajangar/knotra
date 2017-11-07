@@ -1,0 +1,56 @@
+  #container {
+    display: block;
+    width: 100%;
+    /* max-width: 1345px; */
+    margin: 0 0;
+    padding: 0 0;
+    background: #ffffff;
+  }
+  
+  @media only screen and (max-width:1345px) {
+    #container {
+        width: 1345px;
+        /* margin: 0 3%; */
+    }
+  }
+
+  .header {
+    display: inline-block;
+    width: 100%;
+    font-size: 0;
+    line-height: 0;
+    margin: 0 auto;
+    padding: 0;
+    background: #2f94a1;
+    color: #ffffff;
+  }
+
+  .header #login {
+    width: 70%;
+    float: right;
+  }
+
+  #logo {
+    font-family: 'AR CENA', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    /*color: #010000;*/
+    margin: 10px 0 5px 10px;
+    padding: 0;
+    display: block;
+    width: 90px;
+    /* color: white; */
+    color: #d6d9dd;
+    float: left;
+  }
+
+  /*.login {
+    float:right;
+  }*/
+
+  #logo a {
+    text-decoration: none;
+    /* color: white; */
+    color: #d6d9dd;
+  }
