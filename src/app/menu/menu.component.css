@@ -1,89 +1,3 @@
-/*.any {
-    display: inline-block;
-    width: 100%;
-    font-size: 0;
-    line-height: 0;
-    margin: 0 auto;
-    padding: 0;
-    background: #010000;
-    color: #ffffff;
-  }
-  
-  .any,
-  .any ul {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .any ul li {
-    display: inline;
-    float: left;
-    margin: 0 5px 0 0;
-  }
-  
-  .any ul li a {
-    display: block;
-    font-size: 16px;
-    line-height: normal;
-    text-align: center;
-    color: #ffffff;
-    padding: 15px 20px;
-  }
-  
-  .any ul li a:hover {
-    background: #ffffff;
-    color: #010000;
-  }
-
-  a {
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 22px;
-    color: #010000;
-    cursor: pointer;
-  }
-  
-  a:hover {
-    color: #ff1755;
-  }
-  
-  a,
-  a:hover {
-    -webkit-transition: all .4s ease-in-out;
-    -moz-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-  }*/
-
-  /*.any {
-    display: table;
-    width: 100%;
-    font-size: 0;
-    line-height: 50px;
-    margin: 0 auto;
-    padding: 0;
-    background: #2f94a1;
-    color: #ffffff;
-    float: center;
-  }*/
-
-  /*.any ul {
-    
-  }*/
-
-  /*.any ul li {
-    display: inline-flex;
-    text-align: center;
-    margin: 0 50px 0 0;
-    padding: 0 0 0 100px;
-  }
-
-  .any ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    
-  }*/
-
   #menu-outer {
     /*height: 84px;*/
     /*background: url(images/bar-bg.jpg) repeat-x;*/
@@ -95,11 +9,6 @@
     color: #ffffff;
   }
   
-  /* #menu-outer .table {
-    display: inline-block;   Allow the centering to work
-    margin: 0 auto;
-  } */
-
   #menu-outer .table ul#horizontal-list {
     /* min-width: 696px; */
     /* width: 100%; */

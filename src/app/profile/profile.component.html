@@ -1,1 +1,18 @@
-<h1>Profile</h1>
+    <section class='header'>
+        <section>
+            <h1 id='logo'><a routerLink=''>KNOTRA</a></h1>
+        </section>
+    
+        <section id='login' *ngIf="!authService.isLoggedIn">
+            <app-login></app-login>
+        </section>
+            
+        <section id='login' *ngIf="authService.isLoggedIn">
+            <form id="logoutform" (ngSubmit)="logout()">
+                <button tabindex="1" id="logout-submit" type="submit" class="btn btn-success">Logout</button>
+            </form>
+        </section>
+    </section>
+    <router-outlet></router-outlet>
+
+

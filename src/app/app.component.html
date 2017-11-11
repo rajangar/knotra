@@ -1,42 +1,5 @@
 
 <div id='container'>
-    <section class='header'>
-        <section>
-            <div [hidden]="ifPassed()">
-                <h1 id='logo'><a routerLink=''>KNOTRA</a></h1>
-            </div>
-            <div [hidden]="!ifPassed()">
-                <h1 id='logo'><a routerLink='/profile'>KNOTRA</a></h1>
-            </div>
-        </section>
-        <div [hidden]="ifPassed()">
-            <section id='login'>
-                <app-login></app-login>
-                <!--<h1 id='logo'><a routerLink=''>Login</a></h1>
-                <h1>Login</h1>-->
-            </section>
-        </div>
-        <div [hidden]="!ifPassed()">
-            <section id='login'>
-                <app-profile></app-profile>
-            </section>
-        </div>
-    </section>
-    <!--<app-content></app-content>-->
-    <!-- <div [hidden]="ifPassed()">
-        <div routerLink="">
-        </div>
-    </div> -->
-    <!-- <div [hidden]="!ifPassed()"> -->
-        <!-- <div routerLink="/profile"> -->
-        <!-- </div> -->
-    <!-- </div> -->
-        
-    <!-- {{navigate()}} -->
     <router-outlet></router-outlet>
     <app-menu></app-menu>
 </div>
-
-
-
-

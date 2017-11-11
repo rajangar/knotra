@@ -1,6 +1,7 @@
-import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
-import { LoginService } from '../login.service';
-import { CookieService } from 'ngx-cookie-service';
+import { Component, OnInit } from '@angular/core';
+import { Router,
+  NavigationExtras } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -9,47 +10,28 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class LoginComponent implements OnInit {
 
-  cookieValueUserId = '';
-  cookieValuePassword = '';
-  submitted = false;
-  static passed = false;
-  constructor(private loginService: LoginService, private cookieService: CookieService, private cd: ChangeDetectorRef) { }
-
-  ngAfterViewInit() {
-      this.cd.detectChanges();
+  userid: string;
+  password: string;
+  constructor(private authService: AuthService, public router: Router) { 
+    this.userid = '';
+    this.password = '';
   }
 
   onSubmit() {
-    this.submitted = true;
-    console.log('submitted=' + this.submitted + ',userid=' + this.loginService.userid + ',pwd=' + this.loginService.password);
-    this.loginService.setLogin(this.loginService.userid, this.loginService.password);
-    if (this.loginService.loginPassed()) {
-      LoginComponent.passed = true;
-      this.cookieService.set('userid', this.loginService.userid);
-      this.cookieService.set('password', this.loginService.password);
-    }
-    console.log("Passed:" + LoginComponent.passed);
-    console.log('cookie:UserId=' + this.cookieService.get('userid') + ',pwd=' + this.cookieService.get('password'));
+
+    this.authService.login(this.userid, this.password).subscribe(() => {
+      if (this.authService.isLoggedIn) {
+        // Get the redirect URL from our auth service
+        // If no redirect has been set, use the default
+        let redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '/profile';
+
+        this.router.navigate([redirect]);
+      }
+    });
+
   }
 
   ngOnInit() {
-    if(this.cookieService.check('userid') && this.cookieService.check('password')) {
-      this.submitted = true;
-      this.loginService.userid = this.cookieService.get('userid');
-      this.loginService.password = this.cookieService.get('password');
-      this.onSubmit();
-    }
-  }
-
-  checkCookie() {
-    if(!this.cookieService.check('userid') || !this.cookieService.check('password')) {
-      this.submitted = false;
-      LoginComponent.passed = false;
-    }
-  }
-
-  loginPassed() {
-    return LoginComponent.passed;
   }
 
 }
