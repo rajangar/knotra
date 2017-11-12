@@ -8,27 +8,33 @@ import { Router, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 
 import { AppRoutingModule } from './app-routing.module';
+import {HttpModule} from '@angular/http';
 
 import { AuthGuard }                from './auth-guard.service';
+import { DummyGuard }                from './dummy-guard.service';
 import { AuthService }          from './auth.service';
 
 import { ProfileModule } from './profile/profile.module';
 import { MenuComponent } from './menu/menu.component';
+// import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
+    // SearchComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ProfileModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
   providers: [
     CookieService,
     AuthGuard,
+    DummyGuard,
     AuthService
   ],
   bootstrap: [AppComponent]

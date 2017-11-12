@@ -8,9 +8,18 @@
         </section>
             
         <section id='login' *ngIf="authService.isLoggedIn">
-            <form id="logoutform" (ngSubmit)="logout()">
-                <button tabindex="1" id="logout-submit" type="submit" class="btn btn-success">Logout</button>
-            </form>
+            <section id="searchform">
+                <form (ngSubmit)="search()">
+                    <label for="search">Search</label>
+                    <input type="text" class="search-control" id="search" required name="search" tabindex="1" [(ngModel)]="searchQuery" placeholder="search">
+                    <!-- <button tabindex="1" id="search-submit" type="submit" class="btn btn-success">Go</button> -->
+                </form>
+            </section>
+            <section id='logout'>
+                <form id="logoutform" (ngSubmit)="logout()">
+                    <button tabindex="1" id="logout-submit" type="submit" class="btn btn-success">Logout</button>
+                </form>
+            </section>
         </section>
     </section>
     <router-outlet></router-outlet>

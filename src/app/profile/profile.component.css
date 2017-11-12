@@ -1,6 +1,23 @@
-#logoutform {
+#logoutform #searchform {
     margin: 0px 0 5px 10px;
     text-align: right;
+}
+
+#search {
+    line-height: 16px;
+    font-weight: 400;
+    color: rgba(0,0,0,0.85);
+    font-size: 13px;
+    display: inline-block;
+    width: 216px;
+    height: 32px;
+    margin: 10px 8px 10px 0;
+    padding: 0 10px;
+    /* background: #f3f6f8; */
+    background: #d6d9dd;
+    /* border: 1px solid #b3b6b9; */
+    /* border: 1px solid #d6d9dd; */
+    /* border-radius: 2px; */
 }
 
 #logout-submit {
@@ -31,10 +48,36 @@
     color: #ffffff;
 }
 
-.header #logout {
+.header #login #searchform {
+    width: 30%;
+    float: left;
+}
+
+.header #login #logout {
     width: 70%;
     float: right;
 }
+
+.header #login {
+    width: 90%;
+    float: right;
+}
+
+#logout-submit {
+    width: 10%;
+    float: right;
+    /*margin: 0 10px 0 0;*/
+}
+
+/* .header #login #searchform {
+    width: 50%;
+    float: right;
+}
+
+.header #login #logout {
+    width: 50%;
+    float: right;
+} */
 
   #logo {
     font-family: 'AR CENA', sans-serif;

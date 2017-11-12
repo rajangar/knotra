@@ -9,13 +9,20 @@ import { Router } from '@angular/router';
 })
 export class ProfileComponent implements OnInit {
 
+  searchQuery: string;
+
   constructor(private authService: AuthService, private router: Router) {
     this.authService.checkCookie();
+    this.searchQuery = '';
   }
 
    logout() {
     this.authService.logout();
     this.router.navigate(['/']);
+  }
+
+  search() {
+    this.router.navigate(['/search']);
   }
 
   ngOnInit() {
