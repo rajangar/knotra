@@ -8,7 +8,7 @@ import { Router, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 
 import { AppRoutingModule } from './app-routing.module';
-import {HttpModule} from '@angular/http';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AuthGuard }                from './auth-guard.service';
 import { DummyGuard }                from './dummy-guard.service';
@@ -29,7 +29,7 @@ import { MenuComponent } from './menu/menu.component';
     FormsModule,
     ProfileModule,
     AppRoutingModule,
-    HttpModule
+    HttpClientModule
   ],
   providers: [
     CookieService,
